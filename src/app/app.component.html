@@ -1,0 +1,251 @@
+<div class="container-fluid">
+  <!--page is split into two with the top half being the initial viewport height-->
+  <div class="top-half">
+
+    <div class="row">
+      <div class="col-md-12 logo-container">
+        <div class="logo text-center">
+          <img src="../assets/images/logo-luminate-logotype.png" class="luminate-logo" alt="Luminate logo">
+        </div>
+      </div>
+    </div><!-- logo container -->
+
+    <div class="headline-container text-center">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>
+            Qualitative Data Analysis Software
+          </h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3>
+            The first <em>truly</em> cloud-based QDAS, with a social twist!
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="row three-header text-center">
+      <div class="col-md-4">
+        <img src="../assets/images/image-clouds.png">
+        <h2>Purely Cloud-Based</h2>
+        <p>Access anywhere & anytime - Share with collaborators seamlessly - <strong>No</strong> versions and <strong>nothing</strong> to update, ever
+        </p>
+      </div>
+      <div class="col-md-4 logo-mark">
+        <img src="../assets/images/logo-luminate-logomark.png">
+        <h2>Simple & Intuitive</h2>
+        <p>Designed with <strong>students and ECRs in mind</strong> - Clear step-by-step process - Activity based with all you need on <strong>one</strong> screen!
+        </p>
+      </div>
+      <div class="col-md-4">
+        <img src="../assets/images/image-research.png">
+        <h2>Powerful</h2>
+        <p>Researcher context-aware assistance - Interactive data visualization - Auto analyses, reporting, <strong>collaboration</strong>, and more!
+        </p>
+      </div>
+    </div>
+
+    <div class="row text-center app-shot">
+      <div class="col-md-12">
+        <img src="../assets/images/image-screens.png">
+      </div>
+    </div>
+
+  </div><!-- top half -->
+
+  <div class="bottom-half text-center">
+    <div class="row bottom-content">
+      <div class="col-md-12">
+        <div class="introduction">
+          <p>Introducing Luminate QR - the easiest to use and most helpful Qualitative Data Analysis Software (QDAS) ever created, with the ultimate aim of getting you to the right collaborators.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row footer-wait">
+      <div class="col-md-12">
+        <h2>Join the Waitlist for Updates</h2>
+      </div>
+    </div>
+
+    <div class="row footer-waitt">
+      <div class="col-md-12 email-error">
+        <alert *ngIf="noEmailTop" type="danger" dismissible="true" dismissOnTimeout="5000" (onClose)="noEmailTop=false">
+          Please include an email to join the waitlist
+        </alert>
+        <alert *ngIf="subscribed" type="success" dismissible="true" dismissOnTimeout="5000" (onClose)="subscribed=false">
+          <strong>You have subscribed!</strong>
+        </alert>
+        <alert *ngIf="invalidEmail" type="danger" dismissible="true" dismissOnTimeout="5000" (onClose)="invalidEmail=false">
+          That doesn't look like a valid email address!
+        </alert>
+      </div>
+    </div>
+
+    <div class="row footer-wait">
+      <div class="col-md-12">
+        <input id="email-top" class="text-center" type="text" placeholder="Enter your email address">
+        <br><br>
+        <button type="submit" class="btn" (click)="getAccess()">Get Early Access</button>
+      </div>
+    </div>
+  </div><!-- bottom half-->
+
+  <!--product statement / info-->
+  <div class="product-statement-outer">
+    <div class="product-statement">
+      <h2>
+        The Problem
+      </h2>
+      <div>
+        <p class="biggerP"><strong>Existing QDAS - Unintuitive clunky and frustrating</strong></p>
+        <div *ngIf="problemCollapsed" class="more-about" (click)="toggleCollapse('problem')">
+          <span>More about the problem &nbsp;</span>
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+        <div *ngIf="!problemCollapsed">
+          <p>During our time as researchers, we noticed that some QDAS are feature-rich but highly unintuitive, often requiring days or weeks just to get started (much less do anything). Others are more intuitive but so clunky and lacking in features that they’re unusable. Many of the researchers that we interviewed said they ended up doing analyses by hand out of sheer frustration with all QDAS!
+          </p>
+          <br>
+        </div>
+        <div *ngIf="!problemCollapsed" class="more-about" (click)="toggleCollapse('problem')">
+          <span>See Less &nbsp;</span>
+          <span class="glyphicon glyphicon-chevron-up"></span>
+        </div>
+      </div>
+
+
+      <h2>
+        The Solution
+      </h2>
+      <div>
+        <p class="biggerP"><strong>Simple to use QDAS, access anywhere and anytime, ability to collaborate with others and a plethora of powerful tools and features!</strong></p>
+        <div *ngIf="solutionCollapsed" class="more-about" (click)="toggleCollapse('solution')">
+          <span>More about the solution &nbsp;</span>
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+
+        <div *ngIf="!solutionCollapsed">
+          <p>After conducting interviews and focus groups with students and early career researchers to find out what was most important to them, we found the following common concerns:
+          </p>
+          <br>
+
+          <h4>Access anywhere and anytime</h4>
+          <p>All QDAS on the market require an installation of some kind. Ours requires absolutely nothing other than a browser. This means you can access your projects from any machine with an internet connection.</p>
+          <br>
+
+          <h4>Sharing data / projects with collaborators</h4>
+          <p>Many of our interviewees expressed concerns about not being able to share data due to versioning. Our application has no versions, no update dialogs, and makes use of state-of-the-art databases, so sharing is a non-issue.</p>
+          <br>
+
+          <h4>Simple and easy to use</h4>
+          <p><strong>No more endless clicking and waiting for pages to load!</strong></p>
+          <p>By far the most voiced concern, interviewees were frustrated by functionality and simple tasks being spread out all over the application, which can make iterative and/or hermeneutic approaches to coding a nightmare of clicking and screen loading.</p>
+          <p>Our application has a clear step-by-step process of project creation, uploading of media & descriptor creation, coding, analyses and more. Each step also contains everything you need for that process on <strong><em>one</em></strong> screen as a single page application. This keeps students and ECRs on track!
+          </p>
+          <br>
+        </div>
+
+        <div *ngIf="!solutionCollapsed" class="more-about" (click)="toggleCollapse('solution')">
+          <span>See Less &nbsp;</span>
+          <span class="glyphicon glyphicon-chevron-up"></span>
+        </div>
+      </div>
+
+
+      <h2>
+        Power and Features
+      </h2>
+      <div>
+        <p class="biggerP"><strong>Code Suggestions, Data Visualisation, Auto Analysis, Reporting & Finding Collaborators</strong></p>
+        <div *ngIf="featuresCollapsed" class="more-about" (click)="toggleCollapse('features')">
+          <span>More about power and features &nbsp;</span>
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+
+        <div *ngIf="!featuresCollapsed">
+
+          <p>One of the more interesting requests that came from senior-level students and early career researchers was for the QDAS to have some way to suggest high-level / meta codes based on what had been coded up along with the researcher’s theoretical lens and/or specific methodology. We agreed, and this will actually be a module in itself.
+          </p>
+          <p>Data visualisation was another top concern, and many expressed the limited nature of current QDAS. So we are including a plethora of interactive and animated data visualization tools. While we cannot reveal the exact number of these yet, rest assured you will be blown away.</p>
+          <p>Our QDAS will include most, if not all, of the auto analyses that you would expect to see in other QDAS (e.g. content analysis, word stems/trees, code clouds, etc.). However, we won’t stop at that and will be including many, many more, with our ongoing aim to release at least one major feature per quarter once launched!</p>
+          <p>Reporting for supervisors and journal editors/reviewers was also a clear concern, and so our application will include reporting features such as the exact time and date that codes were applied to excerpts, merged with other codes, and other data, so that the entire process (including abstraction) can be easily reconstructed. This means that reconstruction concerns are alleviated and you can focus on coding and analyzing.</p>
+          <br>
+
+          <h4>Finding Collaborators</h4>
+          <p><strong>Getting you to the right people</strong></p>
+          <p>This was actually our idea but it was considered by far the most exciting by interviewees. We all know (or if you are early enough, will know) the institutional politics that often keep novice researchers from finding the right collaborators.</p>
+          <p>While many have expressed concerns with how we might use data, we are being absolutely upfront and continuously transparent about how we will use your data - <strong>we will use it to get you to the right people, <em>period</em> </strong>. This is our passion and our core belief. Furthermore, many senior academics will tell you that <strong>language</strong> can make or break just about any paper or thesis. Hence, much of our efforts will be matching collaborators based on language, whether it be codes used, the texts themselves or literature based on researcher background/lens.
+          </p>
+          <br>
+        </div>
+
+        <div *ngIf="!featuresCollapsed" class="more-about" (click)="toggleCollapse('features')">
+          <span>See Less &nbsp;</span>
+          <span class="glyphicon glyphicon-chevron-up"></span>
+        </div>
+      </div>
+
+
+      <h2>
+        Big Plans Ahead
+      </h2>
+      <div>
+        <p class="biggerP"><strong>Artificial Intelligence, interview & data collection tools, importing codes from other QDAS, social page features and feature requests made by you!</strong></p>
+        <div *ngIf="plansCollapsed" class="more-about" (click)="toggleCollapse('plans')">
+          <span>More about our big plans &nbsp;</span>
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+
+        <div *ngIf="!plansCollapsed">
+          <p>Apart from providing you with the most helpful and state-of-the-art QDAS on the market, planned features include:</p>
+          <p><strong>Artificial intelligence - </strong>We plan to make full use of current and future natural language processing tools to further fuel researcher context-aware assistance and auto analyses. </p>
+          <p><strong>Interview and data collection tools - </strong>Whether you are an ethnographer, a structured or semi-structured kind of girl or guy, or the type who likes ‘qualitative questionnaires’, we’re planning a plethora of data collection techniques that will pull in your data effortlessly. </p>
+          <p><strong>Importing of codes from other QDAS - </strong>Perhaps we are jumping the gun a little bit, but our aim is to make your life easier.</p>
+          <p><strong>Whatever is the most requested by you - </strong>We will be including a mechanism for easily submitting requests and feedback within the app.</p>
+          <p>And, of course, continuous improvements to the <strong>social page that’ll help you find like-minded collaborators!</strong></p>
+        </div>
+        <div *ngIf="!plansCollapsed" class="more-about" (click)="toggleCollapse('plans')">
+          <span>See Less &nbsp;</span>
+          <span class="glyphicon glyphicon-chevron-up"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-half text-center">
+    <div class="row footer-wait">
+      <div class="col-md-12">
+        <h2>Join the Waitlist for Updates</h2>
+      </div>
+    </div>
+    <div class="row footer-wait">
+      <div class="col-md-12 email-error">
+        <alert *ngIf="noEmailBottom" type="danger" dismissible="true" dismissOnTimeout="5000" (onClose)="noEmailBottom=false">
+          Please include an email to join the waitlist
+        </alert>
+        <alert *ngIf="subscribed" type="success" dismissible="true" dismissOnTimeout="5000" (onClose)="subscribed=false">
+          <strong>You have subscribed!</strong>
+        </alert>
+        <alert *ngIf="invalidEmail" type="danger" dismissible="true" dismissOnTimeout="5000" (onClose)="invalidEmail=false">
+          That doesn't look like a valid email address!
+        </alert>
+      </div>
+    </div>
+    <div class="row footer-wait">
+      <div class="col-md-12">
+        <input id="email-bottom" class="text-center" type="text" placeholder="Enter your email address">
+        <br><br>
+        <button type="submit" class="btn" (click)="getAccess()">Get Early Access</button>
+      </div>
+      <div class="col-md-12 email-luminate">
+        <a href="mailto:hello@luminate.space"><p>hello@luminate.space</p></a>
+      </div>
+    </div>
+  </div><!-- bottom half-->
+
+
+</div><!-- container fluid-->
