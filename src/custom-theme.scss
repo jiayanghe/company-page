@@ -2,9 +2,12 @@
 
 @include mat-core();
 
-$luminate-primary: mat-palette($mat-indigo);
-$luminate-accent:  mat-palette($mat-pink, A200, A100, A400);
+$luminate-primary: mat-palette($mat-green);
+$luminate-accent:  mat-palette($mat-yellow);
+$luminate-foreground: mat-palette($mat-pink);
+$luminate-background: mat-palette($mat-indigo);
+$luminate-warn: mat-palette($mat-brown);
 
-$luminate-theme: mat-light-theme($luminate-primary, $luminate-accent);
+$luminate-theme: mat-dark-theme($luminate-primary, $luminate-accent, $luminate-foreground);
 
 @include angular-material-theme($luminate-theme);
