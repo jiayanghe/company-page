@@ -3,11 +3,11 @@
 @include mat-core();
 
 $luminate-primary: mat-palette($mat-green);
-$luminate-accent:  mat-palette($mat-yellow);
+$luminate-accent:  mat-palette($mat-yellow, 700, 300, 900);
 $luminate-foreground: mat-palette($mat-pink);
 $luminate-background: mat-palette($mat-indigo);
-$luminate-warn: mat-palette($mat-brown);
+$luminate-warn: mat-palette($mat-yellow);
 
-$luminate-theme: mat-dark-theme($luminate-primary, $luminate-accent, $luminate-foreground);
+$luminate-theme: mat-dark-theme($luminate-primary, $luminate-accent, $luminate-warn);
 
 @include angular-material-theme($luminate-theme);
