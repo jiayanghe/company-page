@@ -1,5 +1,6 @@
 import {Component, ElementRef} from '@angular/core';
 import {Jsonp} from '@angular/http';
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,11 @@ import {Jsonp} from '@angular/http';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
 
   problemCollapsed = true;
   solutionCollapsed = true;
