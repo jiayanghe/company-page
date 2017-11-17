@@ -1,6 +1,8 @@
 import {Component, ElementRef} from '@angular/core';
+// import { JsonpClientBackend } from '@angular/common/http';
 import {Jsonp} from '@angular/http';
 import {FormControl, Validators} from '@angular/forms';
+import {MatSnackBar} from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +28,8 @@ export class AppComponent {
 
   constructor (
     private el: ElementRef,
-    private jsonp: Jsonp
+    private jsonp: Jsonp,
+    public snackBar: MatSnackBar
   ) {
 
   }
@@ -44,6 +47,9 @@ export class AppComponent {
       this.emailIsBlank = false;
     } else if (!emailTop.value && !emailBottom.value) {
       this.emailIsBlank = true;
+      this.snackBar.open("Email is required!", "Got it", {
+        duration: 2000,
+      });
       if (!emailTop.value) {
         this.noEmailTop = true;
       }
@@ -58,11 +64,17 @@ export class AppComponent {
         this.jsonp.request(url, { method: 'Get' })
           .subscribe((res) => {
             this.subscribed = true;
+            this.snackBar.open("Thanks for subscribing!", "Got it", {
+              duration: 2000,
+            });
             console.log(res);
           });
       } else {
         // raise alert
         this.invalidEmail = true;
+        this.snackBar.open("That doesn't look like a valid email address!", "Got it", {
+          duration: 2000,
+        });
       }
 
     }

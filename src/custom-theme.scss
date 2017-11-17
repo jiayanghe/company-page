@@ -6,7 +6,7 @@ $luminate-primary: mat-palette($mat-green);
 $luminate-accent:  mat-palette($mat-yellow, 700, 300, 900);
 $luminate-foreground: mat-palette($mat-pink);
 $luminate-background: mat-palette($mat-indigo);
-$luminate-warn: mat-palette($mat-yellow);
+$luminate-warn: mat-palette($mat-red);
 
 $luminate-theme: mat-dark-theme($luminate-primary, $luminate-accent, $luminate-warn);
 

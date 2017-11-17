@@ -9,7 +9,6 @@
         </div>
       </div>
     </div><!-- logo container -->
-
     <div class="headline-container text-center">
       <div class="row">
         <div class="col-md-12">
@@ -87,9 +86,14 @@
 
     <div class="row footer-wait">
       <div class="col-md-12">
-        <input id="email-top" class="text-center" type="text" placeholder="Enter your email address">
-        <br><br>
-        <button type="submit" class="btn" (click)="getAccess()">Get Early Access</button>
+        <div class="input-area">
+          <mat-form-field class="form-field">
+            <input matInput placeholder="Enter your email address" id="email-top">
+          </mat-form-field>
+        </div>
+        <button mat-button color="primary" type="submit" class="btn" (click)="getAccess()">
+          Get Early Access
+        </button>
       </div>
     </div>
   </div><!-- bottom half-->
@@ -104,7 +108,9 @@
         <p class="biggerP"><strong>Existing QDAS - Unintuitive clunky and frustrating</strong></p>
         <div *ngIf="problemCollapsed" class="more-about" (click)="toggleCollapse('problem')">
           <span>More about the problem &nbsp;</span>
-          <span class="glyphicon glyphicon-chevron-down"></span>
+          <!-- <span class="glyphicon glyphicon-chevron-down"></span> -->
+          <i class="material-icons">expand_more</i>
+
         </div>
         <div *ngIf="!problemCollapsed">
           <p>During our time as researchers, we noticed that some QDAS are feature-rich but highly unintuitive, often requiring days or weeks just to get started (much less do anything). Others are more intuitive but so clunky and lacking in features that they’re unusable. Many of the researchers that we interviewed said they ended up doing analyses by hand out of sheer frustration with all QDAS!
@@ -113,7 +119,7 @@
         </div>
         <div *ngIf="!problemCollapsed" class="more-about" (click)="toggleCollapse('problem')">
           <span>See Less &nbsp;</span>
-          <span class="glyphicon glyphicon-chevron-up"></span>
+          <i class="material-icons">expand_less</i>
         </div>
       </div>
 
@@ -125,7 +131,7 @@
         <p class="biggerP"><strong>Simple to use QDAS, access anywhere and anytime, ability to collaborate with others and a plethora of powerful tools and features!</strong></p>
         <div *ngIf="solutionCollapsed" class="more-about" (click)="toggleCollapse('solution')">
           <span>More about the solution &nbsp;</span>
-          <span class="glyphicon glyphicon-chevron-down"></span>
+          <i class="material-icons">expand_more</i>
         </div>
 
         <div *ngIf="!solutionCollapsed">
@@ -151,7 +157,7 @@
 
         <div *ngIf="!solutionCollapsed" class="more-about" (click)="toggleCollapse('solution')">
           <span>See Less &nbsp;</span>
-          <span class="glyphicon glyphicon-chevron-up"></span>
+          <i class="material-icons">expand_less</i>
         </div>
       </div>
 
@@ -163,7 +169,7 @@
         <p class="biggerP"><strong>Code Suggestions, Data Visualisation, Auto Analysis, Reporting & Finding Collaborators</strong></p>
         <div *ngIf="featuresCollapsed" class="more-about" (click)="toggleCollapse('features')">
           <span>More about power and features &nbsp;</span>
-          <span class="glyphicon glyphicon-chevron-down"></span>
+          <i class="material-icons">expand_more</i>
         </div>
 
         <div *ngIf="!featuresCollapsed">
@@ -185,7 +191,7 @@
 
         <div *ngIf="!featuresCollapsed" class="more-about" (click)="toggleCollapse('features')">
           <span>See Less &nbsp;</span>
-          <span class="glyphicon glyphicon-chevron-up"></span>
+          <i class="material-icons">expand_less</i>
         </div>
       </div>
 
@@ -197,7 +203,7 @@
         <p class="biggerP"><strong>Artificial Intelligence, interview & data collection tools, importing codes from other QDAS, social page features and feature requests made by you!</strong></p>
         <div *ngIf="plansCollapsed" class="more-about" (click)="toggleCollapse('plans')">
           <span>More about our big plans &nbsp;</span>
-          <span class="glyphicon glyphicon-chevron-down"></span>
+          <i class="material-icons">expand_more</i>
         </div>
 
         <div *ngIf="!plansCollapsed">
@@ -210,7 +216,7 @@
         </div>
         <div *ngIf="!plansCollapsed" class="more-about" (click)="toggleCollapse('plans')">
           <span>See Less &nbsp;</span>
-          <span class="glyphicon glyphicon-chevron-up"></span>
+          <i class="material-icons">expand_less</i>
         </div>
       </div>
     </div>
@@ -237,9 +243,21 @@
     </div>
     <div class="row footer-wait">
       <div class="col-md-12">
-        <input id="email-bottom" class="text-center" type="text" placeholder="Enter your email address">
-        <br><br>
-        <button type="submit" class="btn" (click)="getAccess()">Get Early Access</button>
+        <div class="input-area">
+          <mat-form-field class="form-field">
+            <!-- [formControl]="emailFormControl" -->
+            <input matInput placeholder="Enter your email address" id="email-bottom">
+            <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error> -->
+          </mat-form-field>
+        </div>
+        <button mat-button color="primary" type="submit" class="btn" (click)="getAccess()">
+          Get Early Access
+        </button>
       </div>
       <div class="col-md-12 email-luminate">
         <a href="mailto:hello@luminate.space"><p>hello@luminate.space</p></a>

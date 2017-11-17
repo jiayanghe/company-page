@@ -1,3 +1,32 @@
+.md-input-placeholder {
+  margin-left: 2em;
+  color: red;
+}
+
+.more-about {
+  display: flex;
+}
+
+.material-icons {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: -0.1em;
+}
+
+.input-area {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.form-field {
+  width: 12%;
+}
+
+button {
+  width: 30%;
+}
+
 p {
   font-size: 18px;
   font-weight: 100 !important;
@@ -17,29 +46,6 @@ h4 {
   color: #fdfefd;
   font-family: MuseoSansRounded-700;
   font-size: 20px;
-}
-
-button {
-  background: #61bd3a;
-  color: #fdfefd;
-  width: 40%;
-  font-family: MuseoSansRounded-500;
-  font-size: 24px;
-}
-
-input {
-  background: #45575b;
-  color: #ffffff;
-  font-size: 24px;
-  border: none;
-  width: 40%;
-  height: 50px;
-  margin: 0 auto;
-}
-
-button:hover {
-  background: #61bd3a;
-  color: #fdfefd;
 }
 
 .biggerP {
